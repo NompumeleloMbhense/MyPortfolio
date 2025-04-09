@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Web Page</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <!--Header Section-->
@@ -12,7 +13,8 @@
         <h1>Welcome to My Portfolio</h1>
         <!---Navigation Menu-->
         <nav>
-            <ul>
+            <button id="hamburger">&#9776;</button>
+            <ul id="nav-links">
                 <li><a href="#Home">Home</a></li>
                 <li><a href="#About">About</a></li>
                 <li><a href="#Projects">Projects</a></li>
@@ -23,45 +25,57 @@
     <main>
         <!--About Me Section-->
         <section id="About-Me">
-            <h1>About Me</h1>
+            <h2>About Me</h2>
             <p>My name is Nompumelelo Mbhense and I am a .NET Full-Stack Developer</p>
         </section>
+
+
         <!--Projects Section-->
         <section id="Projects">
-            <h1>Projects</h1>
-            <article>
-                <h3>Project 1</h3>
-                <p>Description of Project 1.</p>
-                <figure>
-                    <img src="project1.jpg" alt="Project 1 Screenshot">
-                </figure>
-                <h3>Project 2</h3>
-                <p>Description of Project 2.</p>
-                <figure>
-                    <img src="project2.jpg" alt="Project 2 Screenshot">
-                </figure>
-                <h3>Project 3</h3>
-                <p>Description of Project 3.</p>
-                <figure>
-                    <img src="project3.jpg" alt="Project 3 Screenshot">
-                </figure>
-            </article>
-        </section id="Skills">
+            <h2>Projects</h2>
+            <section class="projects-container">
+                <div class="project-card">
+                    <h3>Project 1</h3>
+                    <p>Description of Project 1.</p>
+                    <figure>
+                        <img src="project1.jpg" alt="Project 1 Screenshot">
+                    </figure>
+                </div>
+                <div class="project-card">
+                    <h3>Project 2</h3>
+                    <p>Description of Project 2.</p>
+                    <figure>
+                        <img src="project2.jpg" alt="Project 2 Screenshot">
+                    </figure>
+                </div>
+                <div class="project-card">
+                    <h3>Project 3</h3>
+                    <p>Description of Project 3.</p>
+                    <figure>
+                        <img src="project3.jpg" alt="Project 3 Screenshot">
+                    </figure>
+                </div>
+            </section>
+        </section>
+
+
         <!--Skills Sections-->
-        <section>
-            <h1>Skills</h1>
+        <section id="Skills">
+            <h2>Skills</h2>
             <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>.NET</li>
-                <li>C#</li>
-                <li>SQL</li>
+                <li class="skill">HTML</li>
+                <li class="skill">CSS</li>
+                <li class="skill">JavaScript</li>
+                <li class="skill">.NET</li>
+                <li class="skill">C#</li>
+                <li class="skill">SQL</li>
             </ul>
         </section>
+
+
         <!--Contact Section-->
         <section id="Contact-Me">
-            <h1>Contact Me</h1>
+            <h2>Contact Me</h2>
             <form action="submit_form.php" method="post">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
@@ -71,9 +85,12 @@
                 <textarea id="message" name="message" required></textarea>
                 <button type="submit">Send</button>
             </form>
+        </section>
     </main>
     <footer>
         <p>&copy; 2025 My Portfolio</p>
     </footer>
+
+<script src="script.js"></script>
 </body>
 </html>

@@ -19,29 +19,47 @@ header {
     padding: 10px 0;
     text-align: center;
 }
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
+
 nav {
     background: #444;
     color: #fff;
     display: flex;
     justify-content: center;
-    padding: 10px 0;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    
 }
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
 
 nav a {
     color: #fff;
     text-decoration: none;
-    margin: 0 15px;
+    margin: 0 15px; 
     font-weight: bold;
 }
 
 nav a:hover {
     color: #f4f4f4;
     text-decoration: underline;
+}
+
+#hamburger {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 10px;
 }
 
 #About-Me {
@@ -57,56 +75,130 @@ nav a:hover {
     color: #555;
 }
 
-#Projects {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+#projects {
     margin: 20px auto;
     padding: 20px;
     max-width: 1200px;
 }
 
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: content;
+    gap: 20px;
+}
+
 .project-card {
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #f0f0f0;
     padding: 20px;
-    width: 300px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 20px;
+    box-shadow: 0 4px rgba(0, 0, 0, 0.1);
+    width: calc(33.33% - 20px);
 }
 
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+ul{
+    list-style-type: none;
 }
 
-.project-card h3 {
-    margin: 10px 0;
-    font-size: 20px;
+.skill::before{
+    content: "\f121";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    margin-right: 8px;
     color: #333;
 }
 
-.project-card p {
-    font-size: 16px;
-    color: #555;
-    line-height: 1.5;
+#Contact-Me{
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
 }
 
-.project-card a {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 15px;
-    background: #333;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 14px;
+#Contact-Me h2{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#Contact-Me label{
+    display: block;
+    margin-bottom: 6px;
+    margin-top: 16px;
     font-weight: bold;
-    transition: background 0.3s ease;
+    color: #444;
 }
 
-.project-card a:hover {
-    background: #555;
+#Contact-Me input, #Contact-Me textarea{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 8px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border 0.3s ease;
+}
+
+#Contact-Me input:focus, #Contact-Me textarea:focus{
+    border-color: #007BFF;
+    outline: none;
+}
+
+#Contact-Me button{
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%;
+}
+
+#Contact-Me button:hover{
+    background-color: #0056b3;
+}
+
+@media (max-width:768px){
+
+    nav{
+        align-items: flex-start;
+    }
+
+    #hamburger {
+        display: block;
+        align-self: flex-end;
+        margin-right: 20px;
+    }
+
+    nav ul{
+        flex-direction: column;
+        width: 100%;
+        display: none;
+        padding: 10px 0;
+        background: #444;
+    }
+
+    nav ul.show{
+        display: flex;
+    }
+
+    nav a {
+        padding: 10px 20px;
+        width: 100%;
+    }
+
+    .project-card{
+        width: 100%;
+    }
+
 }
