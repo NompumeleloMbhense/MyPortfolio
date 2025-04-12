@@ -225,3 +225,26 @@ ul{
     }
 
 }
+
+@media (max-width: 480px) {
+    body {
+      font-size: 14px;
+    }
+  
+    h1, h2 {
+      font-size: 20px;
+    }
+  
+    .project-card {
+      padding: 15px;
+      font-size: 14px;
+    }
+  
+    #Contact input,
+    #Contact textarea,
+    #Contact button {
+      font-size: 14px;
+      padding: 8px;
+    }
+  }
+  
