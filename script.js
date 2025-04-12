@@ -1,5 +1,6 @@
 // This is a JavaScript file for a personal portfolio website.
-// It includes functionality for a hamburger menu, smooth scrolling, and filtering projects by category.
+// It includes functionality for a hamburger menu, smooth scrolling, and form validation.
+
 // Hamburger Menu
 document.getElementById('hamburger').addEventListener('click',ToggleMenu);
 
