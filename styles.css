@@ -4,6 +4,10 @@ html, body {
     padding: 0; 
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -66,7 +70,7 @@ nav a:hover {
     margin-bottom: 10px;
 }
 
-#About-Me {
+#About {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
@@ -115,7 +119,7 @@ ul{
     color: #333;
 }
 
-#Contact-Me{
+#Contact{
     max-width: 600px;
     margin: 40px auto;
     padding: 20px;
@@ -125,13 +129,13 @@ ul{
     font-family: Arial, sans-serif;
 }
 
-#Contact-Me h2{
+#Contact h2{
     text-align: center;
     margin-bottom: 20px;
     color: #333;
 }
 
-#Contact-Me label{
+#Contact label{
     display: block;
     margin-bottom: 6px;
     margin-top: 16px;
@@ -139,7 +143,7 @@ ul{
     color: #444;
 }
 
-#Contact-Me input, #Contact-Me textarea{
+#Contact input, #Contact textarea{
     width: 100%;
     padding: 10px;
     margin-bottom: 8px;
@@ -150,12 +154,12 @@ ul{
     transition: border 0.3s ease;
 }
 
-#Contact-Me input:focus, #Contact-Me textarea:focus{
+#Contact input:focus, #Contact textarea:focus{
     border-color: #007BFF;
     outline: none;
 }
 
-#Contact-Me button{
+#Contact button{
     margin-top: 20px;
     padding: 12px 20px;
     background-color: #007BFF;
@@ -168,9 +172,11 @@ ul{
     width: 100%;
 }
 
-#Contact-Me button:hover{
+#Contact button:hover{
     background-color: #0056b3;
 }
+
+
 
 @media (max-width:768px){
 

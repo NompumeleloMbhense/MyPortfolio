@@ -18,13 +18,14 @@
                 <li><a href="#Home">Home</a></li>
                 <li><a href="#About">About</a></li>
                 <li><a href="#Projects">Projects</a></li>
+                <li><a href="#Skills">Skills</a></li>
                 <li><a href="#Contact">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <!--About Me Section-->
-        <section id="About-Me">
+        <section id="About">
             <h2>About Me</h2>
             <p>My name is Nompumelelo Mbhense and I am a .NET Full-Stack Developer</p>
         </section>
@@ -74,15 +75,15 @@
 
 
         <!--Contact Section-->
-        <section id="Contact-Me">
+        <section id="Contact">
             <h2>Contact Me</h2>
-            <form action="submit_form.php" method="post">
+            <form action="submit_form.php" method="post" id="contact-form">
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name">
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email">
                 <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
+                <textarea id="message" name="message"></textarea>
                 <button type="submit">Send</button>
             </form>
         </section>
